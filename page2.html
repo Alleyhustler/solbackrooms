@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horror Inside</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      color: white;
+    }
+
+    /* Background image */
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('images/Screenshot\ 2024-09-11\ at\ 20.29.45.png') no-repeat center center/cover;
+      z-index: -1;
+    }
+
+    .content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 4rem;
+      font-family: 'Creepster', cursive;
+      animation: pulse 3s infinite alternate;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 40px;
+    }
+
+    /* Animation for the title */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    /* Top right icons and links */
+    .top-right {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+    }
+
+    .top-right a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
+
+    .top-right a:hover {
+      color: rgb(255, 255, 255);
+      text-shadow: 0 0 5px rgb(255, 255, 255);
+    }
+
+    /* Boxes */
+    .boxes {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .box {
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgb(255, 255, 255);
+      padding: 20px;
+      width: 30%;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgb(255, 255, 255);
+    }
+
+    /* Back button styles */
+    .back {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      font-family: 'Creepster', cursive;
+      cursor: pointer;
+      transition: color 0.3s, transform 0.3s ease, text-shadow 0.3s ease;
+      text-shadow: 0 0 5px rgb(0, 0, 0);
+      animation: pulse 2s infinite; /* Pulsing animation */
+    }
+
+    /* Hover and click effects for the back button */
+    .back:hover {
+      color: rgb(0, 0, 0); /* Text turns red on hover */
+      animation: shake 0.5s; /* Shaking animation on hover */
+      transform: scale(1.1); /* Grows larger on hover */
+      text-shadow: 0 0 20px rgb(0, 0, 0), 0 0 30px rgb(0, 0, 0); /* Glowing effect on hover */
+    }
+
+    .back:active {
+      transform: scale(0.95); /* Shrink slightly on click */
+    }
+
+    /* Shaking effect on hover */
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      50% { transform: translateX(5px); }
+      75% { transform: translateX(-5px); }
+      100% { transform: translateX(0); }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="background"></div>
+
+  <div class="top-right">
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+  </div>
+
+  <div class="content">
+    <h1>Backrooms</h1>
+    <h2>The Backrooms is a mysterious, endless maze of eerily empty rooms, where reality glitches and escape feels impossible. Once you stumble in, survival means navigating its strange levels and avoiding lurking dangers.</h2>
+
+    <div class="boxes">
+      <div class="box">Supply: 1B</div>
+      <div class="box">Burn 25%</div>
+      <div class="box">DEV 5% 95% community</div>
+    </div>
+
+    <div class="back" onclick="window.location.href='index.html';">Back</div> <!-- Back button -->
+  </div>
+
+</body>
+</html>
